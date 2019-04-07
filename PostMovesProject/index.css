@@ -1,0 +1,270 @@
+body {
+  background-color: white;
+}
+
+p {
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+
+h2 {
+  
+
+}
+
+html {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul.animatedunderlinemenu {
+  list-style: none;
+  margin: 0;
+  padding: 1;
+  text-align: center;
+  font: bold 1.5em 'Lato', sans-serif;
+  list-style-type: none;
+  margin: 0px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  clear: both;
+  border-bottom:0.01px solid rgb(0,0,0);
+  padding-bottom:1px;
+   z-index: 1;
+}
+
+ul.animatedunderlinemenu li {
+  display: inline;
+  margin-right: 40px;
+}
+
+ul.animatedunderlinemenu li a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 2px 3px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  letter-spacing: .1em;
+}
+
+ul.animatedunderlinemenu li a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #CAF4F9;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -wekkit-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.animatedunderlinemenu li a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+  
+}
+
+#content {
+  padding: 40px;
+  margin-top: 30px;
+  background-color: white;
+  height: auto;
+}
+
+#content2 {
+  clear: both;
+  margin-top: 10px;
+}
+
+#constrain {
+  max-height: 360px;
+  max-width: 640px;
+}
+#constrain2 {
+  max-height: 60%;
+  max-width: 80%;
+ 
+}
+#constrain3 {
+  float: left;
+  //max-height: 360px;
+  //max-width: 640px;
+  height: 35%;
+  width: 50%;
+  display: block;
+  text-align: center;
+}
+
+#constrain4 {
+  float: left;
+  height: 20%;
+  width: 25%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  
+}
+ 
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container img {
+  position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background-color: white;
+  text-align: center;
+  border-top:0.01px solid rgb(0,0,0);
+}
+
+.container{
+  margin-top:10px;
+  color: black;
+  width: 100%;
+}
+
+.fa-twitter {
+    color: #4099FF;
+}
+
+.fa-facebook {
+    color: #3B5998;
+}
+
+.fa-youtube-play {
+    color: #e52d27;
+}
+
+.fa-linkedin {
+    color: #007bb6;
+}
+
+.fa {
+    opacity: 0.9;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.fa:hover{
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.selectnav {
+    display: none;
+    font-size: 20px;
+    margin: 50px;
+    border: 1px solid #111;
+   background: transparent;
+   width: 150px;
+   padding: 5px 35px 5px 5px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   height: 34px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+    background: url(logosmall.jpg) 96% / 15% no-repeat white;
+  }
+
+/* small screen */
+@media screen and (max-width: 700px) {
+  .js #nav { display: none; }
+  .js .selectnav { display: block; }
+}
+
+.maincontent{
+  position: relative;
+  border: solid;
+  border-width: 1px;
+  height: 610px;
+  width: 90%;
+  align-self: center;
+ }
+
+.leftc{
+  position: absolute;
+  height: 710px;
+  width: 47%;
+  top: 10px;
+  bottom: 10px;
+  left: 1%;
+  text-align: center;
+}
+
+.rightc{
+  position: absolute;
+  height: 710px;
+  width: 47%;
+  top: 10px;
+  bottom: 10px;
+  right: 1%;
+}
+
+.form{
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+
+cont {
+  text-align: center;
+    color: #4286f4;
+    font-weight: bold;
+}
+
+div.profile{
+  position: relative;
+  width: 50%;
+  height: 25%;
+  float: left;
+  clear: right;
+  padding-right: 5%;
+}
+#image{
+  position: relative;
+  float: right;
+  clear: left;
+  width: 30%;
+  height: 20%;
+}

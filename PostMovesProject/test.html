@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"><title>Post Moves Films</title>
+  <style>
+
+body {
+  background-color: white;
+}
+
+p {
+font-family: 'Consolas';
+}
+
+h2 {
+  font-family: 'Consolas';
+
+}
+
+html {
+  background-color: white;
+}
+
+li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul.animatedunderlinemenu {
+  list-style: none;
+  margin: 0;
+  padding: 1;
+  text-align: center;
+  font: bold 1.5em 'Lato', sans-serif;
+  list-style-type: none;
+  margin: 0px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  clear: both;
+  border-bottom:0.01px solid rgb(0,0,0);
+  padding-bottom:1px;
+   z-index: 1;
+}
+
+ul.animatedunderlinemenu li {
+  display: inline;
+  margin-right: 40px;
+}
+
+ul.animatedunderlinemenu li a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 2px 3px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  letter-spacing: .1em;
+}
+
+ul.animatedunderlinemenu li a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #CAF4F9;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -wekkit-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.animatedunderlinemenu li a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+ul.animatedunderlinemenu.expand li a:after {
+  background: #CAF4F9;
+  -webkit-transition: width .3s, opacity .3s, height .3s .3s;
+  transition: width .3s, opacity .3s, height .3s .3s;
+}
+
+ul.animatedunderlinemenu.expand li a:hover:after {
+  width: 100%;
+  height: 10px;
+  opacity: 1;
+}
+
+ul.animatedunderlinemenu.expandup li a:after {
+  background: #CAF4F9;
+  top: auto;
+  bottom: 0;
+  -webkit-transition: width .3s, opacity .3s, height .3s .3s;
+  transition: width .3s, opacity .3s, height .3s .3s;
+}
+
+ul.animatedunderlinemenu.expandup li a:hover:after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Consolas';
+}
+
+.bg {
+  width: 100%;
+  z-index: 0;
+}
+
+#content {
+  padding: 40px;
+  margin-top: 30px;
+  background-color: white;
+  height: auto;
+  
+}
+
+.maincontent {
+  background-color: white;
+  color: black;
+  text-align: center;
+
+}
+
+
+footer {
+background-color: silver;
+}
+
+
+#constrain {
+  max-height: 360px;
+  max-width: 640px;
+}
+#constrain2 {
+  max-height: 360px;
+  max-width: 640px;
+ 
+}
+#constrain3 {
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  
+}
+ 
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+  //position: absolute;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background-color: white;
+  text-align: center;
+  border-top:0.01px solid rgb(0,0,0);
+}
+
+.container{
+  margin-top:10px;
+  color: black;
+  width: 100%;
+}
+
+.fa-twitter {
+    color: #4099FF;
+}
+
+.fa-facebook {
+    color: #3B5998;
+}
+
+.fa-youtube-play {
+    color: #e52d27;
+}
+
+.fa-rss {
+    color: #FF6600;
+}
+
+.fa-vine {
+    color: #00a478;
+}
+
+.fa-flickr {
+    color: #ff0084;
+}
+
+.fa-twitch {
+    color: #6441A5;
+}
+
+.fa-linkedin {
+    color: #007bb6;
+}
+
+.fa {
+    opacity: 0.9;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+.fa:hover{
+    opacity: 1;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#blackback {
+  background-color: white;
+}
+
+.selectnav {
+ display: none;
+ font-size: 20px;
+ //add stuff here for custom dropdown menu
+  }
+
+/* small screen */
+@media screen and (max-width: 700px) {
+  .js #nav { display: none; }
+  .js .selectnav { display: block; }
+}
+
+
+
+
+</style>
+
+<!--advent pro font-->
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+
+<!--fontawesome icon cdn-->
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css%22%20rel=%22stylesheet%22%20integrity=%22sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN%22%20crossorigin=%22anonymous%22%3E'>
+
+<!--Lato font-->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+
+<head>
+
+<body>
+
+
+
+
+ <nav>
+  <ul class="animatedunderlinemenu" id="nav">
+     <li><a href="index.html">Home</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><img src="http://i.imgur.com/ithqDPZ.jpg"></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  
+  
+</nav>
+
+
+ 
+
+   
+
+
+
+<!--large logo-->
+<div id="content">
+  <center><img src="https://i.gyazo.com/51ae8745dbb957162aaaa1aee244be8b.png" alt="logo" width="100%" height="auto"></center>
+
+  <h1>
+MEDIA AND PRODUCTION COMPANY
+</h1>
+
+<!--centered intro video-->
+  <center><div id="constrain">
+    <div class="video-container"><iframe src="https://player.vimeo.com/video/186080664" allowfullscreen></iframe></div>
+  </center>
+</div>
+<div id="content">
+ <center> <h2>
+    AWARD WINNING FILMS
+  </h2>
+  <div id="constrain">
+    <div class="video-container"><iframe src="https://www.youtube.com/embed/ApVsgorZyMs" allowfullscreen></iframe></div>
+  </center>
+  
+
+ </div>
+  
+  <center><p>
+    Winner of 2015 CampusFest Film Festival. Short Film "Of Princes" selected for showing at Cannes International Film Festival.
+  </p></center>
+
+ </div>
+
+
+
+<footer>
+  <div class="footer">
+      <div class="container">
+        <h1>Follow us on:</h1>
+              
+              <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
+              
+              <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+            </span>
+      </div>
+    
+</footer>
+
+
+
+
+ <!--script for icons-->
+<script src="https://use.fontawesome.com/55c68c9da2.js"></script>
+
+
+
+
+<!--
+-----------SOURCES---------------
+http://www.dynamicdrive.com/style/csslibrary/item/css_animated_underline_menu/   -> MENU
+
+https://jsfiddle.net/jalbertbowdenii/rLzd7xdx/  -> STYLE FOR SELECT ELEMENT
+
+http://bootsnipp.com/snippets/k2nNB -> FOOTER
+
+https://css-tricks.com/convert-menu-to-dropdown/ -> MENU CHANGING TO DROPDOWN
+
+https://www.ostraining.com/blog/coding/responsive-videos/   -> MAKING VIDEOS RESPONSIVE
+
+fontawesome.com for social media icons
+
+wwww.builtbybuffalo.com for menu idea
+
+
+-->
+<script src="selectnav.min.js"></script>
+<!--<script>selectnav('nav'); </script>-->
+
+<script>
+selectnav('nav', {
+    //activeclass: 'act',
+    nested: false,
+    label: "Menu"
+});
+</script>
+
+</body>
+</html>
